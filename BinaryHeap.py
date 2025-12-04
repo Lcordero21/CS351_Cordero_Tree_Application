@@ -4,14 +4,15 @@ from NewNode import Node
 class BinaryHeap (Protocol):
     def __init__(self) -> None:
         """
-        Docstring for __init__
         
-        :param self: Description
         """
         self.heap: List[Node] = []
 
         
     def insertNode(self,node:Node)->None:
+        """
+
+        """
         min = self.getMin()
         max = self.getMax()
 
@@ -60,10 +61,13 @@ class BinaryHeap (Protocol):
             return self.heap[(index*2)+2]
         return None
     
-    def printNames(self):
+    def printList(self):
         if len(self.heap) > 0:
             for i in range (len(self.heap)):
                 node = self.heap[i]
                 print(i+1,".", node.getName())
         else: 
             print("There are no tasks!")
+
+    def printTree(self):
+        raise NotImplementedError

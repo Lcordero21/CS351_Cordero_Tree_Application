@@ -4,7 +4,8 @@
 
 
 def run():
- pass
+ while True:
+    pass
 
 
 if __name__ == "__main__":
