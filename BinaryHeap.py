@@ -9,8 +9,6 @@ class BinaryHeap (Protocol):
         """
         Purpose:
             To initialize the heap
-        Parameter:
-            None
         Time Complexity:
             O(1)
         """
@@ -107,6 +105,7 @@ class BinaryHeap (Protocol):
             placeholder = self.heap.pop(index)
             placeholder.changeTimeEst(newTime)
             self.insertNode(placeholder)
+            print("Updated! ✅")
             return
         print("Could not decrease time estimate, sorry!\n")
     
@@ -156,3 +155,21 @@ class BinaryHeap (Protocol):
                 print(i+1,".", node.getName(),"~",node.getTimeEst(),"hrs")
         else: 
             print("There are no tasks!")
+
+    def getLength(self)-> int:
+        """
+        Purpose: 
+            Get the length of the binary heap
+        Time Complexity:
+            O(1)
+        """
+        return len(self.heap)
+    
+    def getNode(self, index)-> Node:
+        """
+        Purpose: 
+            Get the node from the heap
+        Time Complexity:
+            O(1)
+        """
+        return (self.heap[index])
