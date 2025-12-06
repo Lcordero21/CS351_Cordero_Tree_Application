@@ -1,11 +1,17 @@
 from typing import Protocol, List
 
+"""
+I didn't add comments under each function since it's purpose is to either change different 
+components of the Node or to return a certain element. Thus, they all have a time complexity of 
+O(1).
+"""
+
 class Node (Protocol):
-    def __init__(self, assignment, time, description, due)-> None:
+    def __init__(self, assignment, time, description)-> None:
         self.assignment = assignment
         self.timeEst = time
         self.description = description
-        self.dueDate = due
+        self.dueDate = None
 
     def changeName(self,newName)-> None:
         self.assignment = newName
